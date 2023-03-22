@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package = "./pb";
+
+message LocalTimeRequest {}
+message LocalTimeResponse {
+  string local_time = 1;
+}
+
+service Time {
+  rpc LocalTime(LocalTimeRequest) returns (LocalTimeResponse) {}
+}
